@@ -52,7 +52,7 @@ const Footer = () => {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <img 
-                  src="/logo.png" 
+                  src="/logo.jpeg" 
                   alt="Clean Expert Logo" 
                   className="h-14 w-auto object-contain"
                 />

@@ -39,7 +39,7 @@ const Navigation = () => {
             {/* Logo */}
             <a href="#" className="flex items-center gap-3">
               <img 
-                src="/logo.png" 
+                src="/logo.jpeg" 
                 alt="Clean Expert Logo" 
                 className="h-12 w-auto object-contain"
               />
