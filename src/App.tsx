@@ -4,7 +4,6 @@ import Services from './sections/Services';
 import WorkVisuals from './sections/WorkVisuals';
 import HowItWorks from './sections/HowItWorks';
 import Testimonials from './sections/Testimonials';
-import CTABanner from './sections/CTABanner';
 import Footer from './sections/Footer';
 import './App.css';
 
@@ -18,7 +17,6 @@ function App() {
         <WorkVisuals />
         <HowItWorks />
         <Testimonials />
-        <CTABanner />
       </main>
       <Footer />
     </div>

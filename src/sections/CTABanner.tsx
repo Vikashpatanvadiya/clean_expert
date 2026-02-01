@@ -36,31 +36,6 @@ const CTABanner = () => {
                 </div>
               </div>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <a href={`tel:${phoneNumber}`}>
-                  <Button 
-                    size="lg"
-                    className="bg-white text-[#0ea5e9] hover:bg-white/90 px-8 py-6 text-lg rounded-xl font-semibold shadow-lg transition-all hover:-translate-y-0.5 w-full sm:w-auto"
-                  >
-                    <Phone className="w-5 h-5 mr-2" />
-                    Call Now
-                  </Button>
-                </a>
-                <a 
-                  href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button 
-                    size="lg"
-                    className="bg-[#25d366] text-white hover:bg-[#128c7e] px-8 py-6 text-lg rounded-xl font-semibold shadow-lg transition-all hover:-translate-y-0.5 w-full sm:w-auto"
-                  >
-                    <MessageCircle className="w-5 h-5 mr-2" />
-                    Book on WhatsApp
-                  </Button>
-                </a>
-              </div>
             </div>
 
             {/* Right - Quick Contact Card */}

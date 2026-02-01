@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navigation = () => {
@@ -28,26 +28,21 @@ const Navigation = () => {
   return (
     <>
       <nav 
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/10 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-gray-200 ${
           isScrolled 
-            ? 'bg-black/80 backdrop-blur-lg shadow-2xl py-3' 
-            : 'bg-black/60 backdrop-blur-md py-5'
+            ? 'bg-white/95 backdrop-blur-lg shadow-2xl py-2' 
+            : 'bg-white/90 backdrop-blur-md py-3'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-3">
+            <a href="#" className="flex items-center">
               <img 
-                src="/main-logo.png" 
+                src="/final-logo.png" 
                 alt="Clean Expert Logo" 
-                className="h-12 w-auto object-contain"
+                className="h-20 w-auto object-contain"
               />
-              <div className={`text-2xl font-bold transition-colors ${
-                isScrolled ? 'text-white' : 'text-white'
-              }`}>
-                Clean Expert
-              </div>
             </a>
 
             {/* Desktop Navigation */}
@@ -57,7 +52,7 @@ const Navigation = () => {
                   key={link.label}
                   href={link.href}
                   className={`font-medium transition-colors hover:text-[#0ea5e9] ${
-                    isScrolled ? 'text-white' : 'text-white'
+                    isScrolled ? 'text-[#475569]' : 'text-[#475569]'
                   }`}
                 >
                   {link.label}
@@ -65,8 +60,8 @@ const Navigation = () => {
               ))}
             </div>
 
-            {/* CTA Button */}
-            <div className="hidden lg:block">
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center gap-3">
               <a href={`tel:${phoneNumber}`}>
                 <Button 
                   className="bg-[#0ea5e9] hover:bg-[#0284c7] text-white rounded-xl"
@@ -75,13 +70,25 @@ const Navigation = () => {
                   Call Now
                 </Button>
               </a>
+              <a 
+                href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent('Hi! I want to book a cleaning service. Please share more details.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button 
+                  className="bg-[#25d366] hover:bg-[#128c7e] text-white rounded-xl"
+                >
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  WhatsApp
+                </Button>
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`lg:hidden p-2 rounded-lg transition-colors ${
-                isScrolled ? 'text-white' : 'text-white'
+                isScrolled ? 'text-[#1e293b]' : 'text-[#1e293b]'
               }`}
             >
               {isMobileMenuOpen ? (
@@ -126,13 +133,26 @@ const Navigation = () => {
               ))}
             </div>
             
-            <div className="mt-8 pt-8 border-t border-[#e2e8f0]">
+            <div className="mt-8 pt-8 border-t border-[#e2e8f0] space-y-3">
               <a href={`tel:${phoneNumber}`} onClick={() => setIsMobileMenuOpen(false)}>
                 <Button 
                   className="w-full bg-[#0ea5e9] hover:bg-[#0284c7] text-white py-6 rounded-xl"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
+                </Button>
+              </a>
+              <a 
+                href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent('Hi! I want to book a cleaning service. Please share more details.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Button 
+                  className="w-full bg-[#25d366] hover:bg-[#128c7e] text-white py-6 rounded-xl"
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  WhatsApp
                 </Button>
               </a>
             </div>
