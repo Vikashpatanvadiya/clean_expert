@@ -5,6 +5,7 @@ import WorkVisuals from './sections/WorkVisuals';
 import HowItWorks from './sections/HowItWorks';
 import Testimonials from './sections/Testimonials';
 import Footer from './sections/Footer';
+import { Toaster } from '@/components/ui/sonner';
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Testimonials />
       </main>
       <Footer />
+      <Toaster />
     </div>
   );
 }

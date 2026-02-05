@@ -66,18 +66,18 @@ const Footer = () => {
             {/* Social Links */}
             <div className="flex gap-4">
               <a 
-                href="https://www.facebook.com/share/17w3RSp4aq/" 
+                href="https://www.facebook.com/people/Clean-expert-cleaning-service/61583817609369/?rdid=Sx1i2ty5MexGjDAS&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17u9iq4ZHd%2F%3Fref%3D1" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[#334155] rounded-full flex items-center justify-center hover:bg-[#0ea5e9] transition-colors"
+                className="w-10 h-10 bg-[#334155] rounded-full flex items-center justify-center hover:bg-[#1877f2] transition-colors"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a 
-                href="https://www.instagram.com/hitendrakumarjoshi?igsh=MWN0ODg3c2w3cjl5OA==" 
+                href="https://www.instagram.com/clean_expert_cleaning" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[#334155] rounded-full flex items-center justify-center hover:bg-[#ec4899] transition-colors"
+                className="w-10 h-10 bg-[#334155] rounded-full flex items-center justify-center hover:bg-[#e4405f] transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </a>
